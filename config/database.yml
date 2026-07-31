@@ -23,8 +23,8 @@ default: &default
 development:
   <<: *default
   database: book_library_api_development
-  username: postgres
-  password: noor@1024
+username: postgres
+password: <%= ENV["DB_PASSWORD"] %>
   host: localhost
   port: 5432
 
@@ -32,7 +32,7 @@ test:
   <<: *default
   database: book_library_api_test
   username: postgres
-  password: noor@1024
+password: <%= ENV["DB_PASSWORD"] %>
   host: localhost
   port: 5432
 
